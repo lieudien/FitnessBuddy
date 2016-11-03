@@ -1,11 +1,14 @@
 package com.comp7081.project.fitnessbuddy.Fragments;
 
-import android.app.Fragment;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.design.R;
+import android.widget.TextView;
+
+import com.comp7081.project.fitnessbuddy.R;
 
 /**
  * Created by danny on 2016-11-03.
@@ -32,7 +35,8 @@ public class PageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment_page, container, false);
-
+        TextView textView = (TextView) view;
+        textView.setText("Fragment #" + mPage );
         return view;
     }
 }
