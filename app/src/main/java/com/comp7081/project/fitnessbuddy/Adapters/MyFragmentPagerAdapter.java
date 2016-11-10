@@ -4,8 +4,8 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.widget.ContentLoadingProgressBar;
 
+import com.comp7081.project.fitnessbuddy.Fragments.HomeFragment;
 import com.comp7081.project.fitnessbuddy.Fragments.PageFragment;
 
 /**
@@ -29,7 +29,10 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return PageFragment.newInstance(position + 1);
+        if (position == 0)
+            return HomeFragment.newInstance(position + 1);
+        else
+            return PageFragment.newInstance(position + 1);
     }
 
     @Override

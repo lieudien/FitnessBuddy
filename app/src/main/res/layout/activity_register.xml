@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.comp7081.project.fitnessbuddy.Activities.RegisterActivity">
+
+    <TextView
+        android:text="Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvUsername"
+        android:layout_alignBaseline="@+id/etUsername"
+        android:layout_alignBottom="@+id/etUsername"
+        android:layout_alignLeft="@+id/tvFullName"
+        android:layout_alignStart="@+id/tvFullName" />
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPassword"
+        android:layout_alignBaseline="@+id/etPassword"
+        android:layout_alignBottom="@+id/etPassword"
+        android:layout_alignLeft="@+id/tvUsername"
+        android:layout_alignStart="@+id/tvUsername" />
+
+    <TextView
+        android:text="Fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:id="@+id/tvFullName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etFullname"
+        android:layout_alignBaseline="@+id/tvFullName"
+        android:layout_alignBottom="@+id/tvFullName"
+        android:layout_toRightOf="@+id/tvRetypePassword"
+        android:layout_toEndOf="@+id/tvRetypePassword"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:hint="Enter your fullname"/>
+
+    <TextView
+        android:text="Retype Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRetypePassword"
+        android:layout_alignBaseline="@+id/etRetypePassword"
+        android:layout_alignBottom="@+id/etRetypePassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:id="@+id/btnRegister"
+        android:layout_below="@+id/etRetypePassword"
+        android:layout_toRightOf="@+id/tvFullName"
+        android:layout_toEndOf="@+id/tvFullName"
+        android:onClick="onBtnRegisterClick"/>
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:id="@+id/btnCancel"
+        android:layout_alignBaseline="@+id/btnRegister"
+        android:layout_alignBottom="@+id/btnRegister"
+        android:layout_alignRight="@+id/etRetypePassword"
+        android:layout_alignEnd="@+id/etRetypePassword"
+        android:onClick="onBtnCancelClick"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etUsername"
+        android:hint="Enter your username"
+        android:layout_below="@+id/etFullname"
+        android:layout_alignLeft="@+id/etFullname"
+        android:layout_alignStart="@+id/etFullname" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etRetypePassword"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword"
+        android:hint="Retype your password"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etPassword"
+        android:hint="Enter your password"
+        android:layout_below="@+id/etUsername"
+        android:layout_alignLeft="@+id/etUsername"
+        android:layout_alignStart="@+id/etUsername" />
+</RelativeLayout>

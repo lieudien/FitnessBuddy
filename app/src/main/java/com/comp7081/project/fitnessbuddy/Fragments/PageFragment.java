@@ -1,6 +1,5 @@
 package com.comp7081.project.fitnessbuddy.Fragments;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 import com.comp7081.project.fitnessbuddy.R;
 
 /**
- * Created by danny on 2016-11-03.
+ * Created by danny on 2016-11-10.
  */
 
 public class PageFragment extends Fragment {
@@ -32,11 +31,13 @@ public class PageFragment extends Fragment {
         super.onCreate(savedInstanceState);
         mPage = getArguments().getInt(ARG_PAGE);
     }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_fragment_page, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_page, container, false);
         TextView textView = (TextView) view;
-        textView.setText("Fragment #" + mPage );
+        textView.setText("Fragment #" + mPage);
         return view;
     }
 }
